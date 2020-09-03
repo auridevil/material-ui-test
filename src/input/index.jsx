@@ -70,7 +70,7 @@ const VInput = (props) => {
   );
 };
 
-Input.propTypes = {
+VInput.propTypes = {
   disabled: PropTypes.bool,
   errorMessage: PropTypes.node,
   placeholder: PropTypes.string,
@@ -79,7 +79,7 @@ Input.propTypes = {
   value: PropTypes.string.isRequired,
 };
 
-Input.defaultProps = {
+VInput.defaultProps = {
   disabled: false,
   readOnly: false,
   type: "default",

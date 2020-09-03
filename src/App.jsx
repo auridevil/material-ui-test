@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 
 import Input from "./input";
 import InputLabel from "./inputlabel";
+import ErrorLabel from "./errorlabel";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
       <br /> <br />
       <InputLabel required={true}>Filled</InputLabel>
       <Input value={"Hello, is there anybody in there?"} readonly={false} />
+      <ErrorLabel show={false}>This should be hidden</ErrorLabel>
       <br /> <br />
       <InputLabel>Readonly</InputLabel>
       <Input
@@ -38,6 +40,16 @@ export default function App() {
       <br /> <br />
       <InputLabel error={true}>Error</InputLabel>
       <Input placeholder="Error Hint text" type="error" />
+      <ErrorLabel show={true}>Alert Message Here</ErrorLabel>
+      <br /> <br />
+      <InputLabel
+        optionalText="Optional text goes here (E.g. help text)"
+        error={true}
+      >
+        Error
+      </InputLabel>
+      <Input placeholder="Error Hint text" type="error" />
+      <ErrorLabel show={true}>Alert Message Here</ErrorLabel>
     </Fragment>
   );
 }

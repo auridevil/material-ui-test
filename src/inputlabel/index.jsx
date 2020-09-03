@@ -74,13 +74,13 @@ const VInputLabel = (props) => {
   );
 };
 
-InputLabel.propTypes = {
+VInputLabel.propTypes = {
   disabled: PropTypes.bool,
   optionalText: PropTypes.node,
-  required: PropTypes.bools,
+  required: PropTypes.bool,
 };
 
-InputLabel.defaultProps = {
+VInputLabel.defaultProps = {
   disabled: false,
   required: false,
 };
