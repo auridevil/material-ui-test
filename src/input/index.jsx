@@ -48,7 +48,14 @@ const useStyles = makeStyles({
 });
 
 const VInput = (props) => {
-  const { disabled, placeholder, readOnly, type, value } = props;
+  const {
+    disabled,
+    placeholder,
+    readOnly,
+    startAdornment,
+    type,
+    value,
+  } = props;
   const classes = useStyles(props);
 
   return (
@@ -65,6 +72,7 @@ const VInput = (props) => {
       error={type === "error" ? true : false}
       placeholder={placeholder}
       readOnly={readOnly}
+      startAdornment={startAdornment}
       value={value}
     />
   );
@@ -75,6 +83,7 @@ VInput.propTypes = {
   errorMessage: PropTypes.node,
   placeholder: PropTypes.string,
   readOnly: PropTypes.bool,
+  startAdornment: PropTypes.object,
   type: PropTypes.oneOf(["default", "error"]),
   value: PropTypes.string.isRequired,
 };
